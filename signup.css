@@ -1,32 +1,67 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #e0f7fa;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
-  background: white;
-  padding: 30px;
+  background-color: white;
+  padding: 30px 40px;
   border-radius: 10px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   text-align: center;
+  width: 400px;
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 input {
-  padding: 10px;
-  margin: 10px 0;
   width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
 button {
-  padding: 10px 20px;
+  width: 100%;
   background-color: #009688;
   color: white;
+  padding: 10px;
+  font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #00796b;
+}
+
+/* Password Rules Styling */
+.password-rules {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.password-rules p {
+  margin: 4px 0;
+  color: red;
+  padding-left: 5px;
+}
+
+.password-rules p.valid {
+  color: green;
 }
