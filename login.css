@@ -1,32 +1,79 @@
+/* Make body full screen and center content */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  background-color: #d9f2ff;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* Container box styles */
 .container {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px gray;
-  text-align: center;
+  background-color: white;
+  width: 350px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center text/input/button horizontally */
+  justify-content: center; /* Center contents vertically */
 }
 
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Input fields */
 input {
-  padding: 10px;
-  margin: 10px 0;
   width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
+/* Buttons */
 button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: #007acc;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Paragraph under button */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* "Sign Up" button spacing */
+.signup-button {
+  margin-top: 5px;
+  background-color: #ccc;
+  color: #000;
+}
+
+.signup-button:hover {
+  background-color: #bbb;
 }
