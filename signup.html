@@ -11,11 +11,23 @@
     <form id="signupForm">
       <input type="text" id="signupUsername" placeholder="Username" required><br>
       <input type="password" id="signupPassword" placeholder="Password" required><br>
+
+      <!-- Password Rules Section -->
+      <div id="passwordRules" class="password-rules">
+        <p id="rule-length">✖ At least 8 characters</p>
+        <p id="rule-upper">✖ At least one uppercase letter</p>
+        <p id="rule-lower">✖ At least one lowercase letter</p>
+        <p id="rule-digit">✖ At least one digit</p>
+        <p id="rule-special">✖ At least one special character</p>
+      </div>
+
       <input type="email" id="signupEmail" placeholder="Email" required><br>
       <button type="submit">Enter</button>
     </form>
     <p>Already have an account?</p>
     <button onclick="window.location.href='login.html'">Login</button>
   </div>
+
+  <script src="signup.js"></script>
 </body>
 </html>
