@@ -1,21 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.getElementById("loginForm");
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const username = document.getElementById("loginUsername").value.trim();
+  const password = document.getElementById("loginPassword").value;
 
-    const username = document.getElementById("loginUsername").value.trim();
-    const password = document.getElementById("loginPassword").value;
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const foundUser = users.find(user => user.username === username && user.password === password);
-
-    if (foundUser) {
-      alert("Login successful!");
-      window.location.href = "home.html";  // ✅ Redirect to home page
-    } else {
-      alert("Invalid username or password.");
-    }
-  });
+  if (users[username] && users[username].password === password) {
+    localStorage.setItem("loggedInUser", username);
+    alert("Login successful!");
+    window.location.href = "home.html";
+  } else {
+    alert("Invalid username or password.");
+  }
 });
