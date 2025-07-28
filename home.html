@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8" />
+  <title>Home - EduTech</title>
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to EduTech Home Page!</h1>
-    <p>You have successfully logged in or signed up.</p>
+  <div class="navbar">
+    <div class="center-title">EduTech</div>
+    <div class="profile-dropdown">
+      <button id="profileBtn">👤</button>
+      <div id="dropdown" class="dropdown-content">
+        <button class="dropdown-user" onclick="location.href='profile.html'">testuser</button>
+        <button class="dropdown-signout" onclick="signOut()">Sign Out</button>
+      </div>
+    </div>
   </div>
+
+  <div class="grid-container">
+    <button onclick="location.href='upload.html'">Upload PDF</button>
+    <button onclick="location.href='domain.html'">Domain Specific</button>
+    <button onclick="location.href='company.html'">Company Specific</button>
+    <button onclick="location.href='performance.html'">Overall Performance</button>
+  </div>
+
+  <footer>
+    <button onclick="location.href='details.html'">@Details</button>
+  </footer>
+
+  <script src="home.js"></script>
 </body>
 </html>
