@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, <span id="username"></span></h2>
+    <button id="changePasswordBtn">Change Password</button>
+
+    <div id="passwordForm" style="display: none;">
+      <!-- Current Password -->
+      <div class="password-field">
+        <input type="password" id="currentPassword" placeholder="Current Password" required>
+        <button type="button" onclick="togglePassword('currentPassword')">View</button>
+      </div>
+      <div id="currentError" class="error"></div>
+
+      <!-- New Password -->
+      <div class="password-field" style="display:none;" id="newPasswordField">
+        <input type="password" id="newPassword" placeholder="New Password">
+        <button type="button" onclick="togglePassword('newPassword')">View</button>
+      </div>
+
+      <!-- Password Rules -->
+      <div id="passwordRules" class="password-rules" style="display:none;">
+        <p id="lengthRule"><span class="icon">❌</span> At least 8 characters</p>
+        <p id="upperRule"><span class="icon">❌</span> At least one uppercase letter</p>
+        <p id="lowerRule"><span class="icon">❌</span> At least one lowercase letter</p>
+        <p id="digitRule"><span class="icon">❌</span> At least one digit</p>
+        <p id="specialRule"><span class="icon">❌</span> At least one special character</p>
+      </div>
+
+      <!-- Confirm New Password -->
+      <div class="password-field" style="display:none;" id="confirmPasswordField">
+        <input type="password" id="confirmPassword" placeholder="Confirm New Password">
+        <button type="button" onclick="togglePassword('confirmPassword')">View</button>
+      </div>
+
+      <div id="confirmError" class="error"></div>
+      <button id="submitNewPassword" style="display:none;">Submit</button>
+    </div>
+
+    <div id="successMessage"></div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
